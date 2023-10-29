@@ -3,27 +3,27 @@ body {
     font-family: 'Quicksand', sans-serif;
     height: 100vh;
     margin: 3px;
-    border: dotted black 3px
 }
 
-.content {
+.content, .favorites-header {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: dotted lightcoral 3px
+}
+
+.hidden {
+    display: none;
 }
 
 h1 {
-    border: dotted;
     margin: 5px;
     padding: 10px
 }
 
 h2 {
-    border: dotted 2px white;
     margin: 0;
     padding: 10px 20px 2px;
     font-size: medium;
@@ -34,7 +34,6 @@ h2 {
     width: 50%;
     background-color: white;
     border-radius: 15px;
-    border: dotted 3px red;
 }
 
 .radio-button-wrapper {
@@ -47,13 +46,13 @@ h2 {
     justify-content: space-evenly;
 }
 
-.recieve-button-wrapper {
+.receive-button-wrapper {
     display: flex;
     justify-content: center;
     padding: 5px;
 }
 
-.recieve-button {
+.receive-button {
     font-family: 'Quicksand', sans-serif;
     color: white;
     background-color: #134d71;
@@ -61,6 +60,7 @@ h2 {
     padding: 3px;
     border: none;
     border-radius: 5px;
+    cursor: pointer
 }
 
 .message-wrapper {
@@ -72,7 +72,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: dotted red;
     border-radius: 15px;
 }
 
@@ -81,10 +80,29 @@ img {
     height: auto;
 }
 
+.favorite-button, .view-favorites-button, #back-to-main-button  {
+    background-color: #134d71;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+/* #back-to-main-button {
+    background-color: #134d71;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+} */
 
-
-
-
+#back-to-main-button:active, .receive-button:active, .favorite-button:active, .view-favorites-button:active {
+    background-color: #0e3c57;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
 /* COLORS
 light-yellow - #f7e4bf;
