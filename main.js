@@ -47,6 +47,7 @@ viewFavoritesButton.addEventListener('click', function() {
         favoriteMessagesSection.appendChild(messageParagraph);
     }
     
+
     document.querySelector('.favorites-section').classList.remove('hidden')
     document.querySelector('.title').classList.add('hidden')
     document.querySelector('h2').classList.add('hidden')
@@ -58,36 +59,14 @@ viewFavoritesButton.addEventListener('click', function() {
 
 })
 
-
-// create variables for everything we are going to be selecting w/ QuerySel
-// functionality...
-// recieve message button 'click' will initiate the disappearance of the meditator icon and show a 
-// random message .. either affirmation 
-// or mantra (separate arrays) (separate functions??? perhaps 2 functions within a function)
-
-// receiveButton.addEventListener('click', function(event) {
-//     event.preventDefault();
-//     if (affirmationOption.checked) {
-//         generateAffirmation();
-//     } else if (mantraOption.checked) {
-//         generateMantra();
-//     }
-// })
-
-// function generateAffirmation() {
-//     var randomIndex = Math.floor(Math.random() * affirmations.length);
-//     var randomAffirmation = affirmations[randomIndex];
-//     document.getElementById('messageDisplay').textContent = randomAffirmation;
-
-//     meditateIcon.style.display = 'none'
-// }
-
-// function generateMantra() {
-//     var randomIndex = Math.floor(Math.random() * mantras.length);
-//     var randomMantras = mantras[randomIndex];
-//     document.getElementById('messageDisplay').textContent = randomMantras;
-// }
-
-// function displayRandomMantra() {
-//     hide(meditateIcon)
-// }
+backToMainButton.addEventListener('click', function() {
+    document.querySelector('.favorites-section').classList.add('hidden');
+    document.querySelector('.title').classList.remove('hidden');
+    document.querySelector('h2').classList.remove('hidden');
+    document.querySelector('.form-wrapper').classList.remove('hidden');
+    document.querySelector('.message-wrapper').style.display = 'flex';
+    document.querySelector('.favorite-button').classList.remove('hidden');
+    document.querySelector('.view-favorites-button').classList.remove('hidden');
+    
+    backToMainButton.classList.add('hidden');
+});

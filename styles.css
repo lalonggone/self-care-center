@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background: linear-gradient( #134d71, #78a7c6, #f7e4bf);
     font-family: 'Quicksand', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     margin: 3px;
 }
 
@@ -15,10 +15,10 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
-h1 {
+h1 { 
     margin: 5px;
     padding: 10px
 }
@@ -31,9 +31,42 @@ h2 {
 
 .form-wrapper {
     margin: 2px;
+    padding: 1%;
     width: 50%;
     background-color: white;
     border-radius: 15px;
+}
+
+.message-wrapper {
+    color: black;
+    background-color: white;
+    margin: 30px 5px 5px;
+    padding: 2%;
+    height: 100px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.favorites-section  {
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 10px;
+    width: 50%;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.favorites-section p {
+    text-align: center;
+    max-width: 100%;
+    padding: 20px;
 }
 
 .radio-button-wrapper {
@@ -60,20 +93,9 @@ h2 {
     padding: 3px;
     border: none;
     border-radius: 5px;
-    cursor: pointer
+    cursor: pointer;
 }
 
-.message-wrapper {
-    color: black;
-    background-color: white;
-    margin: 30px 5px 5px;
-    height: 100px;
-    width: 75%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-}
 
 img {
     width: 45px;
@@ -89,18 +111,10 @@ img {
     margin: 10px;
     cursor: pointer;
 }
-/* #back-to-main-button {
-    background-color: #134d71;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-} */
+
 
 #back-to-main-button:active, .receive-button:active, .favorite-button:active, .view-favorites-button:active {
-    background-color: #0e3c57;
+    background-color: rgb(218, 187, 32);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
